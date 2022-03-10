@@ -66,6 +66,7 @@ public final class Main {
     // TODO: create a call to Spark.post to make a POST request to a URL which
     // will handle getting matchmaking results for the input
     // It should only take in the route and a new ResultsHandler
+
     Spark.options("/*", (request, response) -> {
       String accessControlRequestHeaders = request.headers("Access-Control-Request-Headers");
       if (accessControlRequestHeaders != null) {
@@ -107,7 +108,7 @@ public final class Main {
 
   /**
    * Handles requests for horoscope matching on an input
-   * 
+   *
    * @return GSON which contains the result of MatchMaker.makeMatches
    */
   private static class ResultsHandler implements Route {
@@ -129,7 +130,7 @@ public final class Main {
         List<String> matches = MatchMaker.makeMatches(sun, moon, rising);
 
         // TODO: create an immutable map using the matches
-        Map myMap = ImmutableMap.of("matchlist", matches);
+        ImmutableMap<String, Object> myMap = ImmutableMap.of("matches", matches);
 
         // TODO: return a json of the suggestions (HINT: use GSON.toJson())
         Gson GSON = new Gson();

@@ -13,12 +13,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 const sugList = document.querySelector('#suggestions');
 // Here, when the value of sun is changed, we will call the method postAndUpdate.
 // TODO: Do the same for moon and rising
-const sun = document.querySelector('#sun');
-sun.addEventListener('change', () => postAndUpdate());
-const moon = document.querySelector('#sun');
-moon.addEventListener('change', () => postAndUpdate());
-const rising = document.querySelector('#sun');
-rising.addEventListener('change', () => postAndUpdate());
+const sun = document.querySelector("#sun");
+sun.addEventListener("change", () => postAndUpdate());
+const moon = document.querySelector("#moon");
+moon.addEventListener("change", () => postAndUpdate());
+const rising = document.querySelector('#rising');
+rising.addEventListener("change", () => postAndUpdate());
 function postAndUpdate() {
     // TODO: empty the suggestionList (you want new suggestions each time someone types something new)
     //  HINT: use .innerHTML

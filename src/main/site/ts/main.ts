@@ -1,19 +1,19 @@
 // TODO: select the list element where the suggestions should go, and all three dropdown elements
 //  HINT: look at the HTML
-const sugList: HTMLUListElement = document.querySelector('#suggestions') as HTMLUListElement;
+const sugList: HTMLInputElement = document.querySelector('#suggestions') as HTMLInputElement;
 
 
 
 // Here, when the value of sun is changed, we will call the method postAndUpdate.
 // TODO: Do the same for moon and rising
-const sun: HTMLInputElement = document.querySelector('#sun') as HTMLInputElement
-sun.addEventListener('change', () => postAndUpdate())
+const sun: HTMLInputElement = document.querySelector("#sun") as HTMLInputElement
+sun.addEventListener("change", () => postAndUpdate())
 
-const moon: HTMLInputElement = document.querySelector('#sun') as HTMLInputElement
-moon.addEventListener('change', () => postAndUpdate())
+const moon: HTMLInputElement = document.querySelector("#moon") as HTMLInputElement
+moon.addEventListener("change", () => postAndUpdate())
 
-const rising: HTMLInputElement = document.querySelector('#sun') as HTMLInputElement
-rising.addEventListener('change', () => postAndUpdate())
+const rising: HTMLInputElement = document.querySelector('#rising') as HTMLInputElement
+rising.addEventListener("change", () => postAndUpdate())
 
 
 // TODO: Define a type for the request data object here.
